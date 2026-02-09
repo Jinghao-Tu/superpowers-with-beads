@@ -35,14 +35,23 @@ Start by understanding the current project context, then ask questions one at a 
 ## After the Design
 
 **Documentation:**
-- Write the validated design to `docs/plans/YYYY-MM-DD-<topic>-design.md`
+- Write the validated design to `docs/brainstorm/YYYY-MM-DD-<topic>-design.md`
 - Use elements-of-style:writing-clearly-and-concisely skill if available
 - Commit the design document to git
+
+**Create root beads issue:**
+- Ensure beads is initialized (`bd init` if `.beads/` doesn't exist)
+- Create a feature-level root issue:
+  ```bash
+  bd create "Feature: <name>" -p 0 --body "Design doc: docs/brainstorm/YYYY-MM-DD-<topic>-design.md"
+  ```
+- Record the returned issue ID — all subtasks created by writing-plans will reference it as parent
+- **REQUIRED SUB-SKILL:** superpowers:using-beads
 
 **Implementation (if continuing):**
 - Ask: "Ready to set up for implementation?"
 - Use superpowers:using-git-worktrees to create isolated workspace
-- Use superpowers:writing-plans to create detailed implementation plan
+- Use superpowers:writing-plans to create detailed implementation plan (as beads dependency graph)
 
 ## Key Principles
 

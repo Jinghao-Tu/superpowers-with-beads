@@ -15,7 +15,7 @@ Guide completion of development work by presenting clear options and handling ch
 
 ## The Process
 
-### Step 1: Verify Tests
+### Step 1: Verify Tests and Beads State
 
 **Before presenting options, verify tests pass:**
 
@@ -35,7 +35,24 @@ Cannot proceed with merge/PR until tests pass.
 
 Stop. Don't proceed to Step 2.
 
-**If tests pass:** Continue to Step 2.
+**Check beads task state:**
+
+```bash
+bd list --json --status open
+```
+
+**If open tasks remain:**
+```
+⚠️ <N> beads tasks still open:
+[list task IDs and titles]
+
+These tasks may need to be completed or explicitly closed before finishing.
+Continue anyway? (tasks might be intentionally deferred)
+```
+
+Wait for confirmation before proceeding.
+
+**If tests pass and all tasks closed (or user confirms):** Continue to Step 2.
 
 ### Step 2: Determine Base Branch
 
