@@ -36,7 +36,7 @@ Start by understanding the current project context, then ask questions one at a 
 
 **Documentation:**
 - Write the validated design to `docs/brainstorm/YYYY-MM-DD-<topic>-design.md`
-- Use elements-of-style:writing-clearly-and-concisely skill if available
+- Use superpowers:writing-clearly-and-concisely skill if available
 - Commit the design document to git
 
 **Create root beads issue:**
